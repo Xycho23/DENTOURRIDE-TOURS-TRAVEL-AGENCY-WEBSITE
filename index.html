@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Add any additional CSS styles here */
+        /* Your existing CSS styles */
+        .facebook-logo {
+            font-size: 24px;
+            color: blue;
+            cursor: pointer;
+        }
+
+        .booking-details {
+            margin-bottom: 50px;
+        }
+
+        .map {
+            display: none; /* Initially hide maps */
+            height: 200px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .review {
+            margin-bottom: 20px;
+        }
+
+        .reviewer {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .rating {
+            color: gold;
+            margin-bottom: 5px;
+        }
+
+        .recommendation {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Facebook Logo -->
+        <i class="fab fa-facebook-square facebook-logo" onclick="window.location.href='https://web.facebook.com/dentouride'"></i> 
+        <h1>Toni Marie Booking System</h1>
+        
+        <!-- San Vicente Long Beach -->
+        <div class="booking-details" id="booking1">
+            <h2>SAN VICENTE LONG BEACH</h2>
+            <div class="booking-info">
+                <img src="sanvicente.png" alt="Image of San Vicente Long Beach">
+                <div class="price">Price: ₱3100/night</div>
+            </div>
+            <div class="review">
+                <div class="reviewer">Joana Dela Cruz (Filipino)</div>
+                <div class="rating">Rating: ⭐️⭐️⭐️⭐️</div>
+                <div class="recommendation">"Great beach with clear water. Perfect for relaxation."</div>
+            </div>
+            <div class="review">
+                <div class="reviewer">Li Ming (Chinese)</div>
+                <div class="rating">Rating: ⭐️⭐️⭐️</div>
+                <div class="recommendation">"Nice scenery but too crowded. Recommend visiting during off-peak season."</div>
+            </div>
+            <button class="btn show-map" data-target="map1">Show Map</button>
+            <div class="map" id="map1"></div>
+            <button class="btn show-booking-form" data-target="booking-form1">Book Now</button>
+            <div class="booking-form hidden" id="booking-form1">
+                <h2>Booking Form for San Vicente Long Beach</h2>
+                <form id="bookingForm1">
+                    <input type="text" placeholder="Name" id="name1" required>
+                    <input type="email" placeholder="Email" id="email1" required>
+                    <input type="number" placeholder="Number of Guests" id="guests1" min="1" required>
+                    <textarea placeholder="Additional Notes" id="notes1"></textarea>
+                    <input type="hidden" id="bookingId1" value="1">
+                    <button type="submit" class="btn">Book Now</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- El Nido -->
+        <div class="booking-details" id="booking2">
+            <h2>EL NIDO</h2>
+            <div class="booking-info">
+                <img src="elnido.png" alt="Image of El Nido">
+                <div class="price">Price: ₱3500/night</div>
+            </div>
+            <div class="review">
+                <div class="reviewer">Marie Santos (Filipino)</div>
+                <div class="rating">Rating: ⭐️⭐️⭐️⭐️⭐️</div>
+                <div class="recommendation">"Absolutely stunning views. Must-visit destination!"</div>
+            </div>
+            <div class="review">
+                <div class="reviewer">Wang Lei (Chinese)</div>
+                <div class="rating">Rating: ⭐️⭐️⭐️⭐️</div>
+                <div class="recommendation">"Beautiful beaches but limited facilities. Bring your own snacks."</div>
+            </div>
+            <button class="btn show-map" data-target="map2">Show Map</button>
+            <div class="map" id="map2"></div>
+            <button class="btn show-booking-form" data-target="booking-form2">Book Now</button>
+            <div class="booking-form hidden" id="booking-form2">
+                <h2>Booking Form for El Nido</h2>
+                <form id="bookingForm2">
+                    <input type="text" placeholder="Name" id="name2" required>
+                    <input type="email" placeholder="Email" id="email2" required>
+                    <input type="number" placeholder="Number of Guests" id="guests2" min="1" required>
+                    <textarea placeholder="Additional Notes" id="notes2"></textarea>
+                    <input type="hidden" id="bookingId2" value="2">
+                    <button type="submit" class="btn">Book Now</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Coron Island -->
+        <div class="booking-details" id="booking3">
+            <h2>CORON ISLAND</h2>
+            <div class="booking-info">
+                <img src="coron.jpg" alt="Image of Coron Island">
+                <div class="price">Price: ₱3000/night</div>
+            </div>
+            <div class="review">
+                <div class="reviewer">Pedro Mendoza (Filipino)</div>
+                <div class="rating">Rating: ⭐️⭐️⭐️⭐️</div>
+                <div class="recommendation">"Breathtaking views! A paradise for snorkeling enthusiasts."</div>
+            </div>
+            <div class="review">
+                <div class="reviewer">Zhang Wei (Chinese)</div>
+                <div class="rating">Rating: ⭐️⭐️⭐️</div>
+                <div class="recommendation">"Nice beaches but quite crowded. Worth a visit if you enjoy water activities."</div>
+            </div>
+            <button class="btn show-map" data-target="map3">Show Map</button>
+            <div class="map" id="map3"></div>
+            <button class="btn show-booking-form" data-target="booking-form3">Book Now</button>
+            <div class="booking-form hidden" id="booking-form3">
+                <h2>Booking Form for Coron Island</h2>
+                <form id="bookingForm3">
+                    <input type="text" placeholder="Name" id="name3" required>
+                    <input type="email" placeholder="Email" id="email3" required>
+                    <input type="number" placeholder="Number of Guests" id="guests3" min="1" required>
+                    <textarea placeholder="Additional Notes" id="notes3"></textarea>
+                    <input type="hidden" id="bookingId3" value="3">
+                    <button type="submit" class="btn">Book Now</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Port Barton -->
+        <div class="booking-details" id="booking4">
+            <h2>PORT BARTON</h2>
+            <div class="booking-info">
+                <img src="portbarton.jpg" alt="Image of Port Barton">
+                <div class="price">Price: ₱2500/night</div>
+            </div>
+            <div class="review">
+                <div class="reviewer">Andres Lucas (Filipino)</div>
+                <div class="rating">Rating: ⭐️⭐️⭐️⭐️</div>
+                <div class="recommendation">"Relaxing atmosphere, beautiful beaches. Ideal for a quiet getaway."</div>
+            </div>
+            <div class="review">
+                <div class="reviewer">Liu Yan (Chinese)</div>
+                <div class="rating">Rating: ⭐️⭐️⭐️</div>
+                <div class="recommendation">"Nice place, but not much to do. Suitable for those seeking tranquility."</div>
+            </div>
+            <button class="btn show-map" data-target="map4">Show Map</button>
+            <div class="map" id="map4"></div>
+            <button class="btn show-booking-form" data-target="booking-form4">Book Now</button>
+            <div class="booking-form hidden" id="booking-form4">
+                <h2>Booking Form for Port Barton</h2>
+                <form id="bookingForm4">
+                    <input type="text" placeholder="Name" id="name4" required>
+                    <input type="email" placeholder="Email" id="email4" required>
+                    <input type="number" placeholder="Number of Guests" id="guests4" min="1" required>
+                    <textarea placeholder="Additional Notes" id="notes4"></textarea>
+                    <input type="hidden" id="bookingId4" value="4">
+                    <button type="submit" class="btn">Book Now</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Puerto Princesa Underground River -->
+        <div class="booking-details" id="booking5">
+            <h2>PUERTO PRINCESA UNDERGROUND RIVER</h2>
+            <div class="booking-info">
+                <img src="underground.jpg" alt="Image of Puerto Princesa Underground River">
+                <div class="price">Price: ₱2700/night</div>
+            </div>
+            <div class="review">
+                <div class="reviewer">Maria Breina Roze (Filipino)</div>
+                <div class="rating">Rating: ⭐️⭐️⭐️⭐️⭐️</div>
+                <div class="recommendation">"A unique experience! The underground river tour is a must-do!"</div>
+            </div>
+            <div class="review">
+                <div class="reviewer">Wu Chun (Chinese)</div>
+                <div class="rating">Rating: ⭐️⭐️⭐️</div>
+                <div class="recommendation">"Interesting tour, but too many tourists. Go early to avoid crowds."</div>
+            </div>
+            <button class="btn show-map" data-target="map5">Show Map</button>
+            <div class="map" id="map5"></div>
+            <button class="btn show-booking-form" data-target="booking-form5">Book Now</button>
+            <div class="booking-form hidden" id="booking-form5">
+                <h2>Booking Form for Puerto Princesa Underground River</h2>
+                <form id="bookingForm5">
+                    <input type="text" placeholder="Name" id="name5" required>
+                    <input type="email" placeholder="Email" id="email5" required>
+                    <input type="number" placeholder="Number of Guests" id="guests5" min="1" required>
+                    <textarea placeholder="Additional Notes" id="notes5"></textarea>
+                    <input type="hidden" id="bookingId5" value="5">
+                    <button type="submit" class="btn">Book Now</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Tubbataha Reefs Natural Park -->
+        <div class="booking-details" id="booking6">
+            <h2>TUBBATAHA REEFS NATURAL PARK</h2>
+            <div class="booking-info">
+                <img src="tubataha.jpg" alt="Image of Tubbataha Reefs Natural Park">
+                <div class="price">Price: ₱3200/night</div>
+            </div>
+            <div class="review">
+                <div class="reviewer">Antonio Nikol (Filipino)</div>
+                <div class="rating">Rating: ⭐️⭐️⭐️⭐️⭐️</div>
+                <div class="recommendation">"Incredible marine life! Perfect for diving enthusiasts."</div>
+            </div>
+            <div class="review">
+                <div class="reviewer">Li Na (Chinese)</div>
+                <div class="rating">Rating: ⭐️⭐️⭐️⭐️</div>
+                <div class="recommendation">"Amazing coral reefs! Bring your underwater camera."</div>
+            </div>
+            <button class="btn show-map" data-target="map6">Show Map</button>
+            <div class="map" id="map6"></div>
+            <button class="btn show-booking-form" data-target="booking-form6">Book Now</button>
+            <div class="booking-form hidden" id="booking-form6">
+                <h2>Booking Form for Tubbataha Reefs Natural Park</h2>
+                <form id="bookingForm6">
+                    <input type="text" placeholder="Name" id="name6" required>
+                    <input type="email" placeholder="Email" id="email6" required>
+                    <input type="number" placeholder="Number of Guests" id="guests6" min="1" required>
+                    <textarea placeholder="Additional Notes" id="notes6"></textarea>
+                    <input type="hidden" id="bookingId6" value="6">
+                    <button type="submit" class="btn">Book Now</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Honda Bay -->
+        <div class="booking-details" id="booking7">
+            <h2>HONDA BAY</h2>
+            <div class="booking-info">
+                <img src="hondabay.jpg" alt="Image of Honda Bay">
+                <div class="price">Price: ₱3000/night</div>
+            </div>
+            <div class="review">
+                <div class="reviewer">Jose Naol (Filipino)</div>
+                <div class="rating">Rating: ⭐️⭐️⭐️⭐️</div>
+                <div class="recommendation">"Lovely islands, great for island hopping and snorkeling."</div>
+            </div>
+            <div class="review">
+                <div class="reviewer">Liu Mei (Chinese)</div>
+                <div class="rating">Rating: ⭐️⭐️⭐️</div>
+                <div class="recommendation">"Nice beaches, but too touristy. Plan your visit wisely."</div>
+            </div>
+            <button class="btn show-map" data-target="map7">Show Map</button>
+            <div class="map" id="map7"></div>
+            <button class="btn show-booking-form" data-target="booking-form7">Book Now</button>
+            <div class="booking-form hidden" id="booking-form7">
+                <h2>Booking Form for Honda Bay</h2>
+                <form id="bookingForm7">
+                    <input type="text" placeholder="Name" id="name7" required>
+                    <input type="email" placeholder="Email" id="email7" required>
+                    <input type="number" placeholder="Number of Guests" id="guests7" min="1" required>
+                    <textarea placeholder="Additional Notes" id="notes7"></textarea>
+                    <input type="hidden" id="bookingId7" value="7">
+                    <button type="submit" class="btn">Book Now</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Balabac Island -->
+        <div class="booking-details" id="booking8">
+            <h2>BALABAC ISLAND</h2>
+            <div class="booking-info">
+                <img src="balabac.jpg" alt="Image of Balabac Island">
+                <div class="price">Price: ₱2800/night</div>
+            </div>
+            <div class="review">
+                <div class="reviewer">When Ang Aguinaldo (Filipino)</div>
+                <div class="rating">Rating: ⭐️⭐️⭐️⭐️⭐️</div>
+                <div class="recommendation">"Untouched paradise! Crystal clear waters and white sandy beaches."</div>
+            </div>
+            <div class="review">
+                <div class="reviewer">Zhao Ming (Chinese)</div>
+                <div class="rating">Rating: ⭐️⭐️⭐️</div>
+                <div class="recommendation">"Beautiful beaches, but facilities are limited. Bring your own food and water."</div>
+            </div>
+            <button class="btn show-map" data-target="map8">Show Map</button>
+            <div class="map" id="map8"></div>
+            <button class="btn show-booking-form" data-target="booking-form8">Book Now</button>
+            <div class="booking-form hidden" id="booking-form8">
+                <h2>Booking Form for Balabac Island</h2>
+                <form id="bookingForm8">
+                    <input type="text" placeholder="Name" id="name8" required>
+                    <input type="email" placeholder="Email" id="email8" required>
+                    <input type="number" placeholder="Number of Guests" id="guests8" min="1" required>
+                    <textarea placeholder="Additional Notes" id="notes8"></textarea>
+                    <input type="hidden" id="bookingId8" value="8">
+                    <button type="submit" class="btn">Book Now</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="notifications"></div>
+    </div>
+
+    <script>
+        // Initialize and display the map for each location
+        function initMap() {
+            // Function to toggle map visibility
+            function toggleMapVisibility(mapId) {
+                var map = document.getElementById(mapId);
+                map.style.display = (map.style.display === 'none') ? 'block' : 'none';
+            }
+    
+            // San Vicente Long Beach
+            document.getElementById('map1').addEventListener('click', function () {
+                toggleMapVisibility('map1');
+            });
+    
+            // El Nido
+            document.getElementById('map2').addEventListener('click', function () {
+                toggleMapVisibility('map2');
+            });
+    
+            // Coron Island
+            document.getElementById('map3').addEventListener('click', function () {
+                toggleMapVisibility('map3');
+            });
+    
+            // Port Barton
+            document.getElementById('map4').addEventListener('click', function () {
+                toggleMapVisibility('map4');
+            });
+    
+            // Puerto Princesa Underground River
+            document.getElementById('map5').addEventListener('click', function () {
+                toggleMapVisibility('map5');
+            });
+    
+            // Tubbataha Reefs Natural Park
+            document.getElementById('map6').addEventListener('click', function () {
+                toggleMapVisibility('map6');
+            });
+    
+            // Honda Bay
+            document.getElementById('map7').addEventListener('click', function () {
+                toggleMapVisibility('map7');
+            });
+    
+            // Balabac Island
+            document.getElementById('map8').addEventListener('click', function () {
+                toggleMapVisibility('map8');
+            });
+        }
+    
+        // Handle form submission for each booking
+        document.querySelectorAll('.booking-form').forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                var name = this.querySelector('input[type="text"]').value;
+                var email = this.querySelector('input[type="email"]').value;
+                var guests = this.querySelector('input[type="number"]').value;
+                var notes = this.querySelector('textarea').value;
+                var bookingId = this.querySelector('input[type="hidden"]').value;
+                var bookingDetails = {
+                    name: name,
+                    email: email,
+                    guests: guests,
+                    notes: notes,
+                    bookingId: bookingId
+                };
+                console.log(bookingDetails);
+                // Send booking details to server
+                // Assume this sends the details to a server using AJAX
+                // and receives a success/failure response
+                // Simulating a successful booking
+                var successMessage = 'Booking successful! We will contact you shortly.';
+                displayNotification(successMessage);
+                this.reset();
+            });
+        });
+    
+        // Function to display notification
+        function displayNotification(message) {
+            var notifications = document.querySelector('.notifications');
+            var notification = document.createElement('div');
+            notification.classList.add('notification');
+            notification.textContent = message;
+            notifications.appendChild(notification);
+            setTimeout(function () {
+                notification.style.display = 'none';
+            }, 3000); // Hide notification after 3 seconds
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvjpdSszM3vJvI0I36xtykmoNzfcItDmg&callback=initMap"></script>
+    
+</body>
+</html>

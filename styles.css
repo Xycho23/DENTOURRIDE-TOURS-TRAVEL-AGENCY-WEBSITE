@@ -1,0 +1,121 @@
+/* Add any additional CSS styles here */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.booking {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.booking-details {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.booking-details h2 {
+  margin-top: 0;
+}
+
+.booking-info img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.booking-map {
+  background-color: #fff;
+  padding: 20px;
+}
+
+#map1 {
+  height: 200px;
+  border-radius: 5px;margin-bottom: 10px;
+}
+
+.booking-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.booking-form h2 {
+  margin-top: 0;
+}
+
+.booking-form form input[type="text"],
+.booking-form form input[type="email"],
+.booking-form form input[type="number"],
+.booking-form form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.booking-form form input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.booking-form form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.active {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.notification {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
